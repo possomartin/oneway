@@ -1,0 +1,60 @@
+{
+  "name": "oneway",
+  "version": "1.0.0",
+  "description": "Hackathon group-chat app",
+  "keywords": [
+    "WebSockets",
+    "NodeJS",
+    "React",
+    "MongoDB"
+  ],
+  "homepage": "https://github.com/possomartin/oneway#readme",
+  "bugs": {
+    "url": "https://github.com/possomartin/oneway/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/possomartin/oneway.git"
+  },
+  "license": "ISC",
+  "author": "Martin Posso",
+  "type": "module",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "nodemon",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "prettier:check": "prettier --check **",
+    "prettier:write": "prettier --write **",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.27.0",
+    "@types/node": "^22.15.18",
+    "eslint": "^9.27.0",
+    "eslint-config-prettier": "^10.1.5",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.0.0",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.5.3",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.32.1"
+  },
+  "dependencies": {
+    "socket.io": "^4.8.1"
+  },
+  "lint-staged": {
+    "*.{ts}": [
+      "prettier --list-different",
+      "npm run prettier:write",
+      "npm run lint:fix",
+      "git add ."
+    ],
+    "*.md": [
+      "prettier --write",
+      "git add ."
+    ]
+  }
+}
